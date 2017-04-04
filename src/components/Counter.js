@@ -5,7 +5,7 @@ class Counter extends React.Component {
     super(props);
 
     this.state = {
-      counter: 0
+      counter: props.initialValue
     };
 
     this.incCounter = this.incCounter.bind(this);
@@ -23,5 +23,13 @@ class Counter extends React.Component {
     );
   }
 }
+
+Counter.defaultProps = {
+  initialValue: 50
+};
+
+Counter.propTypes = {
+  initialValue: React.PropTypes.number
+};
 
 export default Counter;
