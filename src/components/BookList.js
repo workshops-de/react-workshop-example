@@ -7,12 +7,19 @@ class BookList extends React.Component {
     super(props);
 
     this.state = {
-      books: [
-        {title: 'A'},
-        {title: 'B'},
-        {title: 'C'}
-      ]
+      books: []
     };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:4730/books')
+    .then(response => response.json())
+    .then((books) => {
+      this.setState({
+        books: books
+      })
+    })
+    .catch(console.error.bind(console));
   }
 
   render() {
