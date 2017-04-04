@@ -3,13 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 
 import NameRaw from './components/NameRaw';
+import Name from './components/Name';
 
 class App extends Component {
 
   test = 'bla';
 
   render() {
-    return React.createElement(NameRaw, null, null);
+    return (
+      <div>
+        <Name />
+        <NameRaw />
+      </div>
+    );
   }
 }
 
