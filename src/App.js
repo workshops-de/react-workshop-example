@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Counter from './components/Counter';
+import BookList from './components/BookList';
 
 class App extends Component {
 
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Counter initialValue={0} />
+        <BookList />
       </div>
     );
   }
